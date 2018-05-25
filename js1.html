@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    // 内存很重要
+    // js是什么? 轻量级脚本语言 世界上最流行的语言 js不是java;
+    // 一句一句执行的 解释性语言 为脚本语言 从上到下 从做到与
+    // js可以做什么: 让html动起来 做表单验证 现在要学习的/
+    // js ecmascript+dom+bom组成
+    // 解释性语言  相当于翻译 (编译比它多了一步)
+    // js有三种书写位置和注释
+    
+    // !alert()弹出警示框 !console.log()控制台测试 !prompt()输入框方法
+    // 三种书写位置 行内 内嵌(常用) 外联(新建一个js文件后缀为.js  <script src="文件名"></script>
+    <!-- // 外双内单   引号书写位置 -->
+    <!-- 定义变量  像类选择器 一次存储多次使用 -->
+    <!-- 变量是盒子 存在内存里面 存储程序的 -->
+    <!-- 变量的使用 声明变量 起一个变量名字  盒子; 赋值 盒子里面装东西 -->
+    <!-- var num变量声明 num(名字)      var num =(赋值符号) 10(赋值) -->
+    <!-- 先声明后赋值 变量的初始化 = 声明+赋值-->
+    <!-- 计算机里面 是先看右面 再看左面 1+1=2/计算机:2=1+1; -->
+    <!-- var num;只声明未赋值 -->
+    <!-- console.log(num){显示的为undefined 未定义的 未给赋值的} -->
+    <!-- num = 10;未声明支赋值 -->
+    <!-- console.log(num);未声明也可以直接使用 特殊的 -->
+    <!-- !!声明变量并赋值是最好的写法 -->
+    var num = 10;
+    console.log(num)
+    var num = 20 以最后一次赋值为准 现在console.log(num)显示为20;
+    //并集选择器 用逗号隔开 集体声明 
+    js集体声明
+    var num1, num2, num3;
+    num1=num2=num3=10
+    num1=2;
+    num2=3;
+    集体声明并赋值
+    var num1=10,
+        num2=20,
+        num3=30;
+
+
+
+
+
+    js变量名称有严格规则 相当于法律哦!
+    js区分大小写 var age = 18;Age就是不同的结果了
+    
+
+    js变量名称的规范 var 强哥 = 18; console.log(强哥) 中文也可以 但是不符合规范 道德规范
+    变量名称最好有意义 长一点的名称 用驼峰命名法 var myFristName = 'Andy';
+    !!js命名不能以数字开头 可以用下划线 数字 字母 $符号拼接 不要用关键字(for name)!;
+
+
+   !! 变量交换 !!   记得步骤哦!
+    !! 1/!! 重点哦
+    var num1 = 20;//左手
+    var num2 = 30;//右手
+    左手的苹果放到桌子上 
+     var temp = num1;
+    右手给左手
+    num1 = num2;
+    右手拿桌子上面的苹果 
+    num2 = temp;
+    console.log(num1, num2);
+  <!-- 交换了 -->
+  2/ 减去 交换
+  var n1 = 10;
+  var n2 = 8;
+  //2 = 1 + 1
+  //18 = 10 + 8
+  n1 = n1 + n2;
+ //n1 =14
+  n2 = n1 - n2;   //n2 =10
+  n1 = n1 - n2;   n2已经变了 所以 n1-n2 现在为8;
+
+
+  变量交换 -----just a test:
+1/
+   var hey1 = 18;
+   var hey2 = 20;
+   var hello = hey1;
+   //交换过程中可以省略var 以为内上面已经定义了//
+   hey1 = hey2;
+   hey2 = hello;
+   console.log(hey1,hey2);
+2/
+   var hey1 = 18;
+   var hey2 = 20;
+   hey1 = hey1 + hey2;
+   hey2 = hey1 - hey2;此时hey2 的最终值已经是hey1原值了
+   hey1 = hey1 - hey2;so....hey1最终值为hey2;
+   console.log(hey1, hey2);
+  <hr>
+
+
+
+小结 : 变量目的是为了一次声明多次使用
+<!-- var str = 'Andy'  可多次使用 str -->
+可调用  可修改 声明并赋值 不声明不赋值是错误的哦  名称要遵循规则,规范哦
+面试会问哦   哪些变量是不合法的  (关键字 数字开头 之类的)
+
+数据类型简介
+变量属于任何一种数据类型  
+ 不管是什么数据类型 前面定义必须是 var即:
+ var num = 10;(数值)
+ var str ='';(字符串)
+ 通过给值来决定什么数据类型  根据右边的值去判断
+
+
+ 简单数据类型:(共五种)  {通过字面量就能判断出来  等号右面就是字面量}
+number:数值类型;  var num1 = 10; var num2 = 9.9;(小数 即 浮点数)  二进制:0 1; (逢二进一) 八进制: 0-7(疯8进1)满8为10 表示方法 前面加0 console.log(01)结果为1; 十六进制:0-9,a-f为取值范围 0x开头 console.log(0x1)
+输出为10;
+boolean:布尔类型:true/false  var
+string:字符串''
+undefinde
+null
+
+数值型
+
+!!!小数 浮点数 不要用小数进行计算 以及是否相等!!!
+var num1 = 0.1;
+var num2 = 0.2;
+console.log(num1+ num2); 浮点数很特殊 最后结果会有点0000004
+   最大值 和 最小值
+   console.log(number.max_value);
+   console.log(number.mini_value);
+   console.log(infinity);无穷大
+   console.log(-infinity);无穷小
+   console.log(nan);非数字 isnan 不是数值  返回的就是ture 反之false
+
+
+
+
+   布尔类型(if用到最多)
+
+var flag = ture;正确的 真 对的
+var flag = false;错误的 假 错的
+    
+    
+string字符串类型  !!!!!在字符串里面转译需要: str +='\n'; 数值不需要转译直接\n即可;
+
+var str = 'red';
+var str1 = '18';
+var str2 = 'andy';
+特殊符号的打印 字符串里面 想表示出双引号 用斜杠   只要里面的和外面的引号不是同一款引号就行 即外单内双没事  外双内单没事 但凡有重复了 !就要用!反斜杠!在前面哦即:{ \'    \" }!
+var str = 'i\'m rookie 我爱锻炼 \n因为我不想"猝死"~!';
+   alert(str) ; 弹出一个框框 警示框;
+   \n 换行
+  \\写了两个杠 其中一个斜杠的意思转译 so 只显示出一个斜杠
+   \t 缩进的意思
+   \' 单引号
+   \" 双引号
+转译符\  反斜杠!!!!  在字符串里面需要拼接+''
+
+
+
+
+
+<!-- 下午课程开始 -->
+   var str = 'my name is lilei ,who are you';
+   console.log(str.length);//反馈字符的长度  出现在引号里面 都算是字符
+
+
+   拼接字符串!!!!!!赶紧理解!
+//拼接字符 + 
+!!console.log(1+1); // 数值相加
+!!console.log('你好'+'吗');// 字符相连
+!!console.log('强哥'+18);// 只要有字符就会相连!!!!   nan除了字符永相传(nan);
+
+
+引入代入法  不可以直接写 '强哥age岁了'
+var age = 18;  18是变量
+console.log('强哥'+ age + '岁了');拼接起来要用加号哦!  隐隐加加
+规律 '就近原则'  
+
+
+NaN console.log(11+nan);为nan  只要有nan 除了字符串 拼接 会相连 剩下的值和nan拼接都是nan
+
+
+
+
+var age;只定义一个盒子 声明变量未给赋值 cl(age) 会是undefined;
+
+var time = null;
+cl(time); 相当于清空变量  盒子定义值了 值为空  但是清空变量的意思 为null 即空对象!;
+
+获取变量的类型 typeof;
+var num = 10;
+var str = 'andy';
+var flag = true;
+var nu = null;    他是bug  console正常出来的时候该是null 但因为bug so为 object;
+var de = undefined;
+console.log(typeof num/str/flag/nu/de);   就会出现数据类型!
+
+
+数据类型转换!!!  重点  变量也是重点!
+数值类型就是蓝色显示
+boolean 就是紫色
+字符串是黑色
+undefined null 是灰色
+
+
+ var age = prompt('请输入年龄: ')
+ console.log(age);
+ conaole.log(typeof age);  结果就是string类型   从表单和输入框取回来的值就是string类型
+
+转字符型:
+1
+var num = 10;
+var str = num.toString();{括号里面写进制  (2) 现在为2进制}
+console.log(str);// 字符型18了(黑色)
+<!-- console.log(null.toString()); -->
+2
+console.log(String(10));
+3
+console.log(18 + '');  只要有一个是字符型  就是相连  类型为字符型 结果就是18;
+
+
+转数值型:  重点!    表单里面直接是字符型 必须转换成数值型才行
+1
+var str = '18';
+console.log(typeof str);哪个类型
+var num = parseInt(str); 18是蓝色的  说明是数值类型的18了
+console.log(num);那个类型
+<!-- var num = parseInt(10) -->
+parseInt(String)取整函数 顺便转换成数值型 不会四舍五入 不会进位
+
+
+
+2 parseFloat(string)  小数 函数 转换为数值类型
+console.log(parseFloat(12.1));    蓝色的12.1
+console.log(parseFloat('12.1abc'));  结果是12.1 (abc忽略)
+ console.log(parseFloat('abc12.1'));   得出的是nan;!
+
+
+3 Number(string)  
+console.log(Number('18'))  18
+console.log(Number(ture))  1
+console.log(Number(false)) 0
+console.log(Number(null)) 0
+console.log(Number(undefined)) NaN   特殊的哦;
+console.log(Number('')) 0
+
+
+
+4 弱数据类型的特点 - * / 
+var str = '18';
+console.log(str - 18); 结果为数值类型的0;
+
+
+
+
+
+转换为Boolean值:
+
+
+ console.log(Boolean('andy')); 结果为ture;
+ 除了'' 0 NaN null undefined 是false 剩余都是ture;
+
+
+
+    
+
+
+
+
+运算符:
+算术运算符 + - * / %; 取余作用 判断可以不可以被整除 可以被整除的话就 10 %5 ===0
+一元运算符 +正数 -负数 ++ -- 前置后置  !取反
+前置++ var num = 1; num = num + 1(自身加一 一次); num +=1;++num; console.log(num) 先自加 后运算 每运算一次就自加一次 在运算;先己后人
+后置++ var num = 1;  num++; console.log(num) 此时结果为2;  先原值运算 后自增1;   ++前置 ++后置 单独写的时候都是自增1了  先人后己;
+开发时都是用后置加加;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
